@@ -136,10 +136,12 @@ div.botones a,span{
 
  <div id="botones">
   <a onclick="fVolDown()"><span class="material-icons">volume_down</span></a>
+  <a onclick="fRewind()"><span class="material-icons">fast_rewind</span></a>
   <a onclick="fPrevSong()"><span class="material-icons">skip_previous</span></a>
   <a onclick="fPlay()"><span class="material-icons" >play_arrow</span></a>
   <a onclick="fPause()"><span class="material-icons">pause</span></a>
   <a onclick="fNextSong()"><span class="material-icons">skip_next</span></a>
+  <a onclick="fAvanzar()"><span class="material-icons">fast_forward</span></a>
   <a onclick="fVolUp()"><span class="material-icons">volume_up</span></a>
  </div>
   <div id="cancion">
@@ -201,6 +203,12 @@ div.botones a,span{
    if(!(reprod.volume==1)){
     reprod.volume+=0.1;
    }
+  }
+  function fAvanzar(){
+   reprod.currentTime+=10.0;
+  }
+  function fRewind(){
+   reprod.currentTime-=10.0;
   }
  </script>
 </body>
